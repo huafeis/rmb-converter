@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="本工具站可实现人民币金额大小写的快速、准确转换，支持整数、小数等各种金额情况，转换结果严格符合人民币大小写规范。简洁易用的界面，让您轻松完成金额转换操作。">
+    <meta name="keywords" content="人民币,大小写,转换,工具,金额转换,人民币大写,人民币小写">
+    <title>人民币大小写快速转换工具站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>人民币大小写快速转换工具站</h1>
+            <p class="subtitle">快速、准确地转换人民币金额大小写</p>
+        </header>
+
+        <main>
+            <div class="converter-box">
+                <div class="input-section">
+                    <label for="amount">请输入人民币金额（小写）：</label>
+                    <div class="input-group">
+                        <span class="currency-symbol">¥</span>
+                        <input type="text" id="amount" placeholder="请输入数字金额，如：1234.56" autocomplete="off">
+                    </div>
+                    <p class="tip">支持输入整数或小数，最多支持小数点后两位</p>
+                    <button id="convert-btn">转换</button>
+                    <button id="clear-btn">清空</button>
+                </div>
+
+                <div class="result-section">
+                    <h2>转换结果（大写）：</h2>
+                    <div id="result" class="result">人民币 零元整</div>
+                    <button id="copy-btn" class="copy-btn">复制结果</button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h2>使用说明</h2>
+                <ul>
+                    <li>直接在输入框中输入人民币金额（小写），如：1234.56</li>
+                    <li>点击"转换"按钮或按回车键，即可得到大写结果</li>
+                    <li>点击"复制结果"可将转换结果复制到剪贴板</li>
+                    <li>点击"清空"按钮可清除输入和结果</li>
+                </ul>
+            </div>
+
+            <div class="examples">
+                <h2>转换示例</h2>
+                <table>
+                    <tr>
+                        <th>小写金额</th>
+                        <th>大写金额</th>
+                    </tr>
+                    <tr>
+                        <td>1234.56</td>
+                        <td>人民币壹仟贰佰叁拾肆元伍角陆分</td>
+                    </tr>
+                    <tr>
+                        <td>1001.01</td>
+                        <td>人民币壹仟零壹元零壹分</td>
+                    </tr>
+                    <tr>
+                        <td>0.45</td>
+                        <td>人民币肆角伍分</td>
+                    </tr>
+                    <tr>
+                        <td>100000</td>
+                        <td>人民币壹拾万元整</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>© <span id="current-year"></span> 人民币大小写快速转换工具站 | 本工具仅供参考，不作为任何法律依据</p>
+        </footer>
+    </div>
+
+    <script src="js/converter.js"></script>
+</body>
+</html>
